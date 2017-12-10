@@ -1,0 +1,78 @@
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+/**************__MENU__********************/
+nav{
+	width: 100%;
+	background-color: rgba(46, 206, 139, 0.6); 
+	overflow: hidden;
+	padding: 10px;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+	
+}
+
+header{
+	background-image: url("../img/fondo.jpg");
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center center;
+  	padding-bottom: 400px;
+}
+
+.logo{
+	float: left;
+	padding-left: 80px;
+}
+
+.logo img{
+	max-width: 100%;
+	width: 70px;
+	height: auto;
+}
+
+.movile{
+	display: none;
+}
+
+.lista_principal{
+	font-size: 1.25rem;
+	float: right;
+	margin-top: 20px;
+	padding-right: 80px;
+}
+
+.lista_principal li{
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+
+
+/*************__TEXT__***********************/
+
+article .conteiner-cart{
+	
+	background-color: blue;
+	outline: 1px solid red;
+	text-align: center;
+
+}
+
+.conteiner-cart img{
+	max-width: 100%;
+	width: 300px;
+	margin: 0 auto;
+	height: 250px;
+	padding: 10px;
+
+}
