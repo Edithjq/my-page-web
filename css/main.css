@@ -1,6 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	box-sizing: border-box;
 
 }
 /**************__MENU__********************/
@@ -11,16 +12,19 @@ nav{
 	padding: 10px;
 	position: fixed;
 	top: 0px;
-	z-index: 1000;
+	z-index: 10000;
+
 	
 }
 
 header{
-	background-image: url("../img/fondo.jpg");
+	background-image: url(../img/fondo.jpg);
  	background-repeat: no-repeat;
   	background-size: cover;
   	background-position: center center;
   	padding-bottom: 400px;
+  	text-align: center;
+  	position: relative;
 }
 
 .logo{
@@ -34,7 +38,18 @@ header{
 	height: auto;
 }
 
-.movile{
+/**********_MENU_HAMBURGUER_**********/
+.hamburguer-mobile {
+	display: inline-block;
+	position: absolute;
+	left: 70%;
+	top: 25%;
+	max-width: 100%;
+	width: 50px;
+	/*outline: 1px solid red;*/
+
+}
+.desktop{
 	display: none;
 }
 
@@ -50,29 +65,101 @@ header{
 	padding: 10px 20px;
 }
 
+.lista_principal li a{
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
 a{
 	text-decoration: none;
 	color: white;
 	display: block;
 }
 
+header span{
+	/*outline: 1px solid blue;*/
+	display: flex;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 2em;
+	font-weight: 700;
 
+}
+/*section inline block para que se adapte los demas  div*/
+section{
+ 	display: inline-block;
+
+}
+
+
+/*p{
+	color: white;
+	line-height: 1.5%;
+	font-size: 20px;
+	font-weight: 500;
+}*/
+*/
 
 /*************__TEXT__***********************/
 
-article .conteiner-cart{
+.conteiner-cart{
 	
 	background-color: blue;
 	outline: 1px solid red;
 	text-align: center;
+	border: 10px solid white;
 
 }
-
+.cart-title{
+	background-image: url(../img/stripes.png);
+	padding: 20px;
+}
 .conteiner-cart img{
 	max-width: 100%;
-	width: 300px;
-	margin: 0 auto;
-	height: 250px;
-	padding: 10px;
+	height: 150px;
+	padding: 5px;
+	border-radius: 5%;
 
 }
+
+footer{
+	width: 100%;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+
+
+@media(min-width: 768px){
+	/*esconder el icon cuando sea mayor a 768px*/
+	.hamburguer-mobile {
+		display: none;
+	}
+	/*activar el menu*/
+	.desktop{
+		display: block;
+	}
+
+	.conteinert-cart {
+		display: block;
+	}
+/*menorar el tamaño de titulo de la fuente*/
+	header span{
+		font-size: 3rem;
+	}
+
+	.conteiner-cart img{
+	max-width: 100%;
+	width: 310px;
+	height: 200px;
+	padding: 5px;
+	border-radius: 5%;
+
+}
+}
+
+
+
